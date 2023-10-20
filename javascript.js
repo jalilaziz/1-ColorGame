@@ -58,3 +58,28 @@ function drop4(a4) {
      var data = a4.dataTransfer.getData("txt4");
      a4.target.appendChild(document.getElementById(data));
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+     const dragbox = document.getElementById("dragbox");
+     const divs = dragbox.querySelectorAll(".color");
+     const shuffleButton = document.getElementById("shuffleButton");
+ 
+     shuffleButton.addEventListener("click", function () {
+         // Convert the NodeList to an array for easier manipulation
+         const divArray = Array.from(divs);
+ 
+         // Shuffle the array
+         for (let i = divArray.length - 1; i > 0; i--) {
+             const j = Math.floor(Math.random() * (i + 1));
+             [divArray[i], divArray[j]] = [divArray[j], divArray[i]];
+         }
+ 
+         // Empty the container
+         dragbox.innerHTML = '';
+ 
+         // Append the shuffled divs back to the container
+         divArray.forEach(div => dragbox.appendChild(div));
+     });
+ });
+ 
+ 
