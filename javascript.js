@@ -21,7 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
          // Append the shuffled divs back to the container
          divArray.forEach(div => dragbox.appendChild(div));
      });
- });
+     
+// Reset score with the start button
+const resetButton = document.getElementById('startButton');
+resetButton.addEventListener('click', function () {
+  score = 0;
+  document.getElementById('score').textContent = 'MY SCORE: ' + '  0 / 1160';
+});
+});
 
 //drag and drop
 //0
@@ -182,12 +189,6 @@ document.addEventListener('DOMContentLoaded', function () {
          }
        });
      });
-
-// Reset score with the start button
-  const resetButton = document.getElementById('startButton');
-  resetButton.addEventListener('click', function () {
-    score = 0;
-    document.getElementById('score').textContent = 'MY SCORE: ' + '  0 / 1160';
-  });
 });
+
 

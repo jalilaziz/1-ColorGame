@@ -4,11 +4,11 @@
 html, body {
     height: 100%;
 }
-h2 {
+/* h2 {
     text-align: center;
     width: 500px;
     height: 70px;
-    border: 6px solid rgb(168, 168, 168);
+    border: 3px solid rgb(168, 168, 168);
     margin: auto;
     padding: 4px;
     font-size: 40px;
@@ -18,7 +18,58 @@ h2 {
     background: #e0e0e0;
     box-shadow:  2px 2px 4px #5b5959,
              0px 0px 0px #ffffff;
-}
+}*/
+h2 {
+    margin: auto;
+    margin-bottom: 15px;
+    width: fit-content;
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 15px;
+    color: var(--glow-color);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .5em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .5em .10em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   h2::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .2;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   h2:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .5em var(--glow-color),
+           0 0 2em 1em var(--glow-spread-color),
+           inset 0 0 .5em .5em var(--glow-color);
+   }
+   
+   h2:active {
+    box-shadow: 0 0 0.6em .5em var(--glow-color),
+           0 0 2.5em 1em var(--glow-spread-color),
+           inset 0 0 .2em .5em var(--glow-color);
+   }
 
 #dropbox {
     margin:auto;
@@ -52,6 +103,7 @@ h2 {
     height: 130px;
     margin:auto;
     padding: 0;
+    color:white;
     font-weight: bold;
     text-align:center;
     border: 2px solid lightgrey;
@@ -79,23 +131,23 @@ h2 {
 
 /*startbutton*/
 #startButton {
-    margin: 30px;
+    margin: 25px;
     float: left;
     --glow-color: rgb(217, 176, 255);
     --glow-spread-color: rgba(191, 123, 255, 0.781);
     --enhanced-glow-color: rgb(231, 206, 255);
     --btn-color: rgb(100, 61, 136);
     border: .25em solid var(--glow-color);
-    padding: 1em 3em;
+    padding: 30px;
     color: var(--glow-color);
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;
-    box-shadow: 0 0 1em .25em var(--glow-color),
+    box-shadow: 0 0 1em .2em var(--glow-color),
            0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .75em .25em var(--glow-color);
+           inset 0 0 .4em .2em var(--glow-color);
     text-shadow: 0 0 .5em var(--glow-color);
     position: relative;
     transition: all 0.3s;
@@ -118,15 +170,15 @@ h2 {
    #startButton:hover {
     color: var(--btn-color);
     background-color: var(--glow-color);
-    box-shadow: 0 0 1em .25em var(--glow-color),
+    box-shadow: 0 0 1em .5em var(--glow-color),
            0 0 4em 2em var(--glow-spread-color),
-           inset 0 0 .75em .25em var(--glow-color);
+           inset 0 0 .5em .5em var(--glow-color);
    }
    
    #startButton:active {
-    box-shadow: 0 0 0.6em .25em var(--glow-color),
+    box-shadow: 0 0 0.6em .5em var(--glow-color),
            0 0 2.5em 2em var(--glow-spread-color),
-           inset 0 0 .5em .25em var(--glow-color);
+           inset 0 0 .5em .5em var(--glow-color);
    }
 
 /*score*/
@@ -141,16 +193,16 @@ h2 {
     --enhanced-glow-color: rgb(231, 206, 255);
     --btn-color: rgb(100, 61, 136);
     border: .25em solid var(--glow-color);
-    padding: 1em 3em;
+    padding: 22px;
     color: var(--glow-color);
-    font-size: 18px;
+    font-size: 28px;
     font-weight: bold;
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;
-    box-shadow: 0 0 1em .25em var(--glow-color),
+    box-shadow: 0 0 1em .5em var(--glow-color),
            0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .5em .25em var(--glow-color);
+           inset 0 0 .5em .5em var(--glow-color);
     text-shadow: 0 0 .5em var(--glow-color);
     position: relative;
     transition: all 0.3s;
