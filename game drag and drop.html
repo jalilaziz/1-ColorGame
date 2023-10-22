@@ -5,64 +5,63 @@
     <link rel="stylesheet" href="style.css">
     <script src="javascript.js"></script>
 </head>
-<body style="background-image:url('images/background-body.jpg'); width:100%;height:100%;">
+<body style="background-image:url('images/background-body.jpg'); width:100%;height:100%;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
     <header class="headerr">
         <h2>COLLECT THE COLORS</h2>
     </header>
     
     <div>
-        <button id="shuffleButton">START</button>
+        <button id="startButton">START</button>
+        <div id="score">MY SCORE: <br> 0 / 1160</div>
         <div id="dropbox">
-            <div class="red" id="drop1" style="background-color:red" ondrop="drop1(event)" ondragover="allowDrop1(event)">RED</div>
-            <img class="img1" src="images/space1.png">
-            <div class="blue" id="drop2" style="background-color:blue" ondrop="drop2(event)" ondragover="allowDrop2(event)">BLUE</div>
-            <img class="img2" src="images/space2.png">
-            <div class="green" id="drop3" style="background-color:green" ondrop="drop3(event)" ondragover="allowDrop3(event)">GREEN</div>
-            <img class="img3" src="images/space3.png">
-            <div class="violet" id="drop4" style="background-color:#8a2be2" ondrop="drop4(event)" ondragover="allowDrop4(event)">VIOLET</div>
+            <div class="drop-zone" id="drop1" style="background-color:red" ondrop="drop1(event)" ondragover="allowDrop1(event)">RED</div>
+            <div class="drop-zone" id="drop2" style="background-color:blue" ondrop="drop2(event)" ondragover="allowDrop2(event)">BLUE</div>
+            <div class="drop-zone" id="drop3" style="background-color:green" ondrop="drop3(event)" ondragover="allowDrop3(event)">GREEN</div>
+            <div class="drop-zone" id="drop4" style="background-color:#8a2be2" ondrop="drop4(event)" ondragover="allowDrop4(event)">VIOLET</div>
         </div>
         <br>
         <div id="dragbox" ondrop="drop0(event)" ondragover="allowDrop0(event)">
             <div>
-                <div style="background-color:#b30000;" class="color" id="red1" draggable="true" ondragstart="drag1(event)"></div>
-                <div style="background-color:#cc0000;" class="color" id="red2" draggable="true" ondragstart="drag1(event)"></div>
-                <div style="background-color:#e60000;" class="color" id="red3" draggable="true" ondragstart="drag1(event)"></div>
-                <div style="background-color:#ff0000;" class="color" id="red4" draggable="true" ondragstart="drag1(event)"></div>
-                <div style="background-color:#ff1a1a;" class="color" id="red5" draggable="true" ondragstart="drag1(event)"></div>
-                <div style="background-color:#ff3333;" class="color" id="red6" draggable="true" ondragstart="drag1(event)"></div>
-                <div style="background-color:#ff2b00;" class="color" id="red7" draggable="true" ondragstart="drag1(event)"></div>
-                <div style="background-color:#ff4d4d;" class="color" id="red8" draggable="true" ondragstart="drag1(event)"></div>
+                <div style="background-color:#b30000;" class="drag-item" id="red1" draggable="true" ondragstart="drag1(event)"></div>
+                <div style="background-color:#cc0000;" class="drag-item" id="red2" draggable="true" ondragstart="drag1(event)"></div>
+                <div style="background-color:#e60000;" class="drag-item" id="red3" draggable="true" ondragstart="drag1(event)"></div>
+                <div style="background-color:#ff0000;" class="drag-item" id="red4" draggable="true" ondragstart="drag1(event)"></div>
+                <div style="background-color:#ff1a1a;" class="drag-item" id="red5" draggable="true" ondragstart="drag1(event)"></div>
+                <div style="background-color:#ff3333;" class="drag-item" id="red6" draggable="true" ondragstart="drag1(event)"></div>
+                <div style="background-color:#ff2b00;" class="drag-item" id="red7" draggable="true" ondragstart="drag1(event)"></div>
+                <div style="background-color:#ff4d4d;" class="drag-item" id="red8" draggable="true" ondragstart="drag1(event)"></div>
             </div>
             <div>
-                <div style="background-color:#0000b3;" class="color" id="blue1" draggable="true" ondragstart="drag2(event)"></div>
-                <div style="background-color:#0000cc;" class="color" id="blue2" draggable="true" ondragstart="drag2(event)"></div>
-                <div style="background-color:#0000e6;" class="color" id="blue3" draggable="true" ondragstart="drag2(event)"></div>
-                <div style="background-color:#0000ff;" class="color" id="blue4" draggable="true" ondragstart="drag2(event)"></div>
-                <div style="background-color:#1a1aff;" class="color" id="blue5" draggable="true" ondragstart="drag2(event)"></div>
-                <div style="background-color:#3333ff;" class="color" id="blue6" draggable="true" ondragstart="drag2(event)"></div>
-                <div style="background-color:#2727ff;" class="color" id="blue7" draggable="true" ondragstart="drag2(event)"></div>
-                <div style="background-color:#4d4dff;" class="color" id="blue8" draggable="true" ondragstart="drag2(event)"></div>
+                <div style="background-color:#0000b3;" class="drag-item" id="blue1" draggable="true" ondragstart="drag2(event)"></div>
+                <div style="background-color:#0000cc;" class="drag-item" id="blue2" draggable="true" ondragstart="drag2(event)"></div>
+                <div style="background-color:#0000e6;" class="drag-item" id="blue3" draggable="true" ondragstart="drag2(event)"></div>
+                <div style="background-color:#0000ff;" class="drag-item" id="blue4" draggable="true" ondragstart="drag2(event)"></div>
+                <div style="background-color:#1a1aff;" class="drag-item" id="blue5" draggable="true" ondragstart="drag2(event)"></div>
+                <div style="background-color:#3333ff;" class="drag-item" id="blue6" draggable="true" ondragstart="drag2(event)"></div>
+                <div style="background-color:#2727ff;" class="drag-item" id="blue7" draggable="true" ondragstart="drag2(event)"></div>
+                <div style="background-color:#4d4dff;" class="drag-item" id="blue8" draggable="true" ondragstart="drag2(event)"></div>
             </div>
             <div>
-                <div style="background-color:#004d00;" class="color" id="green1" draggable="true" ondragstart="drag3(event)"></div>
-                <div style="background-color:#025b02;" class="color" id="green2" draggable="true" ondragstart="drag3(event)"></div>
-                <div style="background-color:#006700;" class="color" id="green3" draggable="true" ondragstart="drag3(event)"></div>
-                <div style="background-color:#008000;" class="color" id="green4" draggable="true" ondragstart="drag3(event)"></div>
-                <div style="background-color:#009a00;" class="color" id="green5" draggable="true" ondragstart="drag3(event)"></div>
-                <div style="background-color:#00b300;" class="color" id="green6" draggable="true" ondragstart="drag3(event)"></div>
-                <div style="background-color:#00cd00;" class="color" id="green7" draggable="true" ondragstart="drag3(event)"></div>
-                <div style="background-color:#68e268;" class="color" id="green8" draggable="true" ondragstart="drag3(event)"></div>
+                <div style="background-color:#004d00;" class="drag-item" id="green1" draggable="true" ondragstart="drag3(event)"></div>
+                <div style="background-color:#025b02;" class="drag-item" id="green2" draggable="true" ondragstart="drag3(event)"></div>
+                <div style="background-color:#006700;" class="drag-item" id="green3" draggable="true" ondragstart="drag3(event)"></div>
+                <div style="background-color:#008000;" class="drag-item" id="green4" draggable="true" ondragstart="drag3(event)"></div>
+                <div style="background-color:#009a00;" class="drag-item" id="green5" draggable="true" ondragstart="drag3(event)"></div>
+                <div style="background-color:#00b300;" class="drag-item" id="green6" draggable="true" ondragstart="drag3(event)"></div>
+                <div style="background-color:#00cd00;" class="drag-item" id="green7" draggable="true" ondragstart="drag3(event)"></div>
+                <div style="background-color:#68e268;" class="drag-item" id="green8" draggable="true" ondragstart="drag3(event)"></div>
             </div>
             <div>
-                <div style="background-color:#6317a9;" class="color" id="violet1" draggable="true" ondragstart="drag4(event)"></div>
-                <div style="background-color:#701ac0;" class="color" id="violet2" draggable="true" ondragstart="drag4(event)"></div>
-                <div style="background-color:#7d1dd6;" class="color" id="violet3" draggable="true" ondragstart="drag4(event)"></div>
-                <div style="background-color:#8a2be2;" class="color" id="violet4" draggable="true" ondragstart="drag4(event)"></div>
-                <div style="background-color:#9641e5;" class="color" id="violet5" draggable="true" ondragstart="drag4(event)"></div>
-                <div style="background-color:#a358e8;" class="color" id="violet6" draggable="true" ondragstart="drag4(event)"></div>
-                <div style="background-color:#af6eeb;" class="color" id="violet7" draggable="true" ondragstart="drag4(event)"></div>
-                <div style="background-color:#bd8aed;" class="color" id="violet8" draggable="true" ondragstart="drag4(event)"></div>
+                <div style="background-color:#6317a9;" class="drag-item" id="violet1" draggable="true" ondragstart="drag4(event)"></div>
+                <div style="background-color:#701ac0;" class="drag-item" id="violet2" draggable="true" ondragstart="drag4(event)"></div>
+                <div style="background-color:#7d1dd6;" class="drag-item" id="violet3" draggable="true" ondragstart="drag4(event)"></div>
+                <div style="background-color:#8a2be2;" class="drag-item" id="violet4" draggable="true" ondragstart="drag4(event)"></div>
+                <div style="background-color:#9641e5;" class="drag-item" id="violet5" draggable="true" ondragstart="drag4(event)"></div>
+                <div style="background-color:#a358e8;" class="drag-item" id="violet6" draggable="true" ondragstart="drag4(event)"></div>
+                <div style="background-color:#af6eeb;" class="drag-item" id="violet7" draggable="true" ondragstart="drag4(event)"></div>
+                <div style="background-color:#bd8aed;" class="drag-item" id="violet8" draggable="true" ondragstart="drag4(event)"></div>
             </div>
+            
         </div>
     </div>
 </body>
