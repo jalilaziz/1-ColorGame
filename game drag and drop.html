@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Color Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <script src="javascript.js"></script>
 </head>
@@ -10,17 +12,22 @@
         <h2>COLLECT THE COLORS</h2>
     </header>
     
-    <div>
-        <button id="startButton">START</button>
-        <div id="score">MY SCORE: <br> 0 / 1160</div>
-        <div id="dropbox">
+    <div style="display:flex;">
+        <div class="buttons">
+            <button class="start-button" id="startButton">START</button>
+            <button class="check-button" onclick="checkButton()">CHECK</button>
+        </div>
+    
+        <div class="drop-box" id="dropbox">
             <div class="drop-zone" id="drop1" style="background-color:red" ondrop="drop1(event)" ondragover="allowDrop1(event)">RED</div>
             <div class="drop-zone" id="drop2" style="background-color:blue" ondrop="drop2(event)" ondragover="allowDrop2(event)">BLUE</div>
             <div class="drop-zone" id="drop3" style="background-color:green" ondrop="drop3(event)" ondragover="allowDrop3(event)">GREEN</div>
             <div class="drop-zone" id="drop4" style="background-color:#8a2be2" ondrop="drop4(event)" ondragover="allowDrop4(event)">VIOLET</div>
         </div>
+        <div class="scoree" id="score">MY SCORE: <br> 0 / 1160</div>
+    </div>
         <br>
-        <div id="dragbox" ondrop="drop0(event)" ondragover="allowDrop0(event)">
+        <div id="dragbox" class="drag-box" ondrop="drop0(event)" ondragover="allowDrop0(event)">
             <div>
                 <div style="background-color:#b30000;" class="drag-item" id="red1" draggable="true" ondragstart="drag1(event)"></div>
                 <div style="background-color:#cc0000;" class="drag-item" id="red2" draggable="true" ondragstart="drag1(event)"></div>
@@ -61,8 +68,7 @@
                 <div style="background-color:#af6eeb;" class="drag-item" id="violet7" draggable="true" ondragstart="drag4(event)"></div>
                 <div style="background-color:#bd8aed;" class="drag-item" id="violet8" draggable="true" ondragstart="drag4(event)"></div>
             </div>
-            
         </div>
-    </div>
+    
 </body>
 </html>

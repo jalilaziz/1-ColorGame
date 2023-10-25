@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
              [divArray[i], divArray[j]] = [divArray[j], divArray[i]];
          }
  
-         // Empty the container
+         // Empty dragbox
          dragbox.innerHTML = '';
  
          // Append the shuffled divs back to the container

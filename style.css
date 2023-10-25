@@ -71,7 +71,7 @@ h2 {
            inset 0 0 .2em .5em var(--glow-color);
    }
 
-#dropbox {
+.drop-box {
     margin:auto;
     margin-bottom: 60px;
     width: 65%;
@@ -87,7 +87,8 @@ h2 {
              -2px -2px 4px #ffffff;
 }
 
-#dragbox {
+/*.drag-box {
+    width: auto;
     background-color: lightgray;   
     width:100%;
     border: 0px solid lightslategray;
@@ -95,9 +96,9 @@ h2 {
     background: #e0e0e0;
     box-shadow: 2px 2px 4px #262525,
              -2px -2px -8px #ffffff;
-}
+}*/
 
-#drop1, #drop2, #drop3, #drop4 {
+.drop-zone {
     width: 85px;
     height: 130px;
     margin:auto;
@@ -112,8 +113,7 @@ h2 {
              -2px -2px 4px #ffffff;
 }
 
-/*.red, .blue, .green, .violet*/
-#red1, #red2, #red3, #red4,#red5, #red6, #red7, #red8, #blue1, #blue2, #blue3, #blue4, #blue5, #blue6, #blue7, #blue8, #green1, #green2, #green3, #green4, #green5, #green6, #green7, #green8, #violet1, #violet2, #violet3, #violet4, #violet5, #violet6, #violet7, #violet8 {
+.drag-item{
     float: left;
     width: 70px;
     height: 100px;
@@ -128,9 +128,15 @@ h2 {
              -2px -2px 2px #ffffff;
 }
 
+.buttons {
+       display: flex;
+       flex-direction:column;
+}
+
 /*startbutton*/
-#startButton {
+.start-button {
     width: 15%;
+    height: 50%;
     margin: 15px;
     float: left;
     --glow-color: rgb(217, 176, 255);
@@ -138,7 +144,7 @@ h2 {
     --enhanced-glow-color: rgb(231, 206, 255);
     --btn-color: rgb(100, 61, 136);
     border: .25em solid var(--glow-color);
-    padding: 30px;
+    padding: 20px;
     color: var(--glow-color);
     font-size: 25px;
     font-weight: bold;
@@ -153,7 +159,7 @@ h2 {
     transition: all 0.3s;
    }
    
-   #startButton::after {
+   .start-button::after {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -167,7 +173,7 @@ h2 {
     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
    }
    
-   #startButton:hover {
+   .start-button:hover {
     color: var(--btn-color);
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .5em var(--glow-color),
@@ -175,11 +181,67 @@ h2 {
            inset 0 0 .5em .5em var(--glow-color);
    }
    
-   #startButton:active {
+   .start-button:active {
     box-shadow: 0 0 0.6em .5em var(--glow-color),
            0 0 2.5em 2em var(--glow-spread-color),
            inset 0 0 .5em .5em var(--glow-color);
    }
+
+   
+/*checkbutton*/
+.check-button {
+       width: 15%;
+       height: 50%;
+       margin-left: 15px;
+       margin-top: 0;
+       float: left;
+       --glow-color: rgb(217, 176, 255);
+       --glow-spread-color: rgba(191, 123, 255, 0.781);
+       --enhanced-glow-color: rgb(231, 206, 255);
+       --btn-color: rgb(100, 61, 136);
+       border: .25em solid var(--glow-color);
+       padding: 20px;
+       color: var(--glow-color);
+       font-size: 25px;
+       font-weight: bold;
+       background-color: var(--btn-color);
+       border-radius: 1em;
+       outline: none;
+       box-shadow: 0 0 1em .2em var(--glow-color),
+              0 0 4em 1em var(--glow-spread-color),
+              inset 0 0 .4em .2em var(--glow-color);
+       text-shadow: 0 0 .5em var(--glow-color);
+       position: relative;
+       transition: all 0.3s;
+      }
+      
+      .check-button::after {
+       pointer-events: none;
+       content: "";
+       position: absolute;
+       top: 120%;
+       left: 0;
+       height: 100%;
+       width: 100%;
+       background-color: var(--glow-spread-color);
+       filter: blur(2em);
+       opacity: .7;
+       transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+      }
+      
+      .check-button:hover {
+       color: var(--btn-color);
+       background-color: var(--glow-color);
+       box-shadow: 0 0 1em .5em var(--glow-color),
+              0 0 4em 2em var(--glow-spread-color),
+              inset 0 0 .5em .5em var(--glow-color);
+      }
+      
+      .check-button:active {
+       box-shadow: 0 0 0.6em .5em var(--glow-color),
+              0 0 2.5em 2em var(--glow-spread-color),
+              inset 0 0 .5em .5em var(--glow-color);
+      }
 
 /*score*/
    #score {
@@ -188,7 +250,6 @@ h2 {
     margin: auto;
     margin-top: 20px;
     margin-right: 15px;
-    float:right;
     --glow-color: rgb(217, 176, 255);
     --glow-spread-color: rgba(191, 123, 255, 0.781);
     --enhanced-glow-color: rgb(231, 206, 255);
