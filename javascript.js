@@ -22,12 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
          divArray.forEach(div => dragbox.appendChild(div));
      });
      
-// Reset score with the start button
-const resetButton = document.getElementById('startButton');
-resetButton.addEventListener('click', function () {
-  score = 0;
-  document.getElementById('score').textContent = 'MY SCORE: ' + '  0 / 1160';
-});
+     // Reset score with the start button
+     const resetButton = document.getElementById('startButton');
+     resetButton.addEventListener('click', function () {
+     score = 0;
+     document.getElementById('score').textContent = 'MY SCORE: ' + '  0 / 1160';
+     });
 });
 
 //drag and drop
@@ -95,7 +95,6 @@ function drop4(a4) {
 //score
 document.addEventListener('DOMContentLoaded', function () {
      let score = 0;
-   
      const correctMappings = {
        //drop1
        'red1': 'drop1',
@@ -191,4 +190,20 @@ document.addEventListener('DOMContentLoaded', function () {
      });
 });
 
+/*Shuffle on load*/
+window.addEventListener('load', function() {
+     // Get the container element and its child items
+     const container = document.getElementById('dragbox');
+     const items = Array.from(container.getElementsByClassName('drag-item'));
+ 
+     // Shuffle the items randomly
+     for (let i = items.length - 1; i > 0; i--) {
+         const j = Math.floor(Math.random() * (i + 1));
+         [items[i], items[j]] = [items[j], items[i]];
+     }
+ 
+     // Reinsert the shuffled items into the container
+     items.forEach(item => container.appendChild(item));
+ });
+ 
 

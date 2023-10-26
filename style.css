@@ -4,6 +4,24 @@
 html, body {
     height: 100%;
 }
+
+.scds {
+    margin-bottom: 60px;
+}
+
+@media (max-width:660px) {
+  .scds, .buttons, .start-button, .check-button, .drop-box, .drop-zone, .scoree{
+       flex-direction: column;
+       margin-bottom: 9px;
+       align-items: center;
+       margin:auto;
+  }
+  .buttons{
+       margin-bottom: 8px;
+  }
+
+}
+
 /* h2 {
     text-align: center;
     width: 500px;
@@ -73,7 +91,6 @@ h2 {
 
 .drop-box {
     margin:auto;
-    margin-bottom: 60px;
     width: 65%;
     height: 170px;
     border: 4px solid gray;
@@ -130,21 +147,21 @@ h2 {
 
 .buttons {
        display: flex;
-       flex-direction:column;
+       flex-direction: column;
+       width: 15%;
 }
 
 /*startbutton*/
 .start-button {
-    width: 15%;
-    height: 50%;
-    margin: 15px;
+    margin-top: 8px;
+    width: 100%;
+    height: 40%;
     float: left;
     --glow-color: rgb(217, 176, 255);
     --glow-spread-color: rgba(191, 123, 255, 0.781);
     --enhanced-glow-color: rgb(231, 206, 255);
     --btn-color: rgb(100, 61, 136);
     border: .25em solid var(--glow-color);
-    padding: 20px;
     color: var(--glow-color);
     font-size: 25px;
     font-weight: bold;
@@ -190,17 +207,14 @@ h2 {
    
 /*checkbutton*/
 .check-button {
-       width: 15%;
-       height: 50%;
-       margin-left: 15px;
-       margin-top: 0;
-       float: left;
+       width: 100%;
+       height: 40%;
+       margin-top: 15px;
        --glow-color: rgb(217, 176, 255);
        --glow-spread-color: rgba(191, 123, 255, 0.781);
        --enhanced-glow-color: rgb(231, 206, 255);
        --btn-color: rgb(100, 61, 136);
        border: .25em solid var(--glow-color);
-       padding: 20px;
        color: var(--glow-color);
        font-size: 25px;
        font-weight: bold;
