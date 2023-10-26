@@ -10,7 +10,7 @@ html, body {
 }
 
 @media (max-width:660px) {
-  .scds, .buttons, .start-button, .check-button, .drop-box, .drop-zone, .scoree{
+  .scds, .buttons, .start-button, .check-button, .drop-box, .drop-zone, .scoree, .drag-box{
        flex-direction: column;
        margin-bottom: 9px;
        align-items: center;
@@ -19,24 +19,9 @@ html, body {
   .buttons{
        margin-bottom: 8px;
   }
-
+  
 }
 
-/* h2 {
-    text-align: center;
-    width: 500px;
-    height: 70px;
-    border: 3px solid rgb(168, 168, 168);
-    margin: auto;
-    padding: 4px;
-    font-size: 40px;
-    margin-bottom: 10px;
-    border-radius: 25%;
-    border-radius: 41px;
-    background: #e0e0e0;
-    box-shadow:  2px 2px 4px #5b5959,
-             0px 0px 0px #ffffff;
-}*/
 h2 {
     margin: auto;
     margin-bottom: 15px;
@@ -104,17 +89,6 @@ h2 {
              -2px -2px 4px #ffffff;
 }
 
-/*.drag-box {
-    width: auto;
-    background-color: lightgray;   
-    width:100%;
-    border: 0px solid lightslategray;
-    border-radius: 25px;
-    background: #e0e0e0;
-    box-shadow: 2px 2px 4px #262525,
-             -2px -2px -8px #ffffff;
-}*/
-
 .drop-zone {
     width: 85px;
     height: 130px;
@@ -129,6 +103,17 @@ h2 {
     box-shadow:  4px 4px 6px #080808,
              -2px -2px 4px #ffffff;
 }
+
+/*
+.drag-box {
+    background-color: lightgray;   
+    height: 100%;
+    border: 4px solid lightslategray;
+    border-radius: 25px;
+    justify-items: center;
+    box-shadow: 2px 2px 4px #262525,
+                -2px -2px -8px #ffffff;
+} */
 
 .drag-item{
     float: left;
@@ -207,58 +192,58 @@ h2 {
    
 /*checkbutton*/
 .check-button {
-       width: 100%;
-       height: 40%;
-       margin-top: 15px;
-       --glow-color: rgb(217, 176, 255);
-       --glow-spread-color: rgba(191, 123, 255, 0.781);
-       --enhanced-glow-color: rgb(231, 206, 255);
-       --btn-color: rgb(100, 61, 136);
-       border: .25em solid var(--glow-color);
-       color: var(--glow-color);
-       font-size: 25px;
-       font-weight: bold;
-       background-color: var(--btn-color);
-       border-radius: 1em;
-       outline: none;
-       box-shadow: 0 0 1em .2em var(--glow-color),
-              0 0 4em 1em var(--glow-spread-color),
-              inset 0 0 .4em .2em var(--glow-color);
-       text-shadow: 0 0 .5em var(--glow-color);
-       position: relative;
-       transition: all 0.3s;
-      }
+    width: 100%;
+    height: 40%;
+    margin-top: 15px;
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    color: var(--glow-color);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .2em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .4em .2em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
       
-      .check-button::after {
-       pointer-events: none;
-       content: "";
-       position: absolute;
-       top: 120%;
-       left: 0;
-       height: 100%;
-       width: 100%;
-       background-color: var(--glow-spread-color);
-       filter: blur(2em);
-       opacity: .7;
-       transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
-      }
+   .check-button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
       
-      .check-button:hover {
-       color: var(--btn-color);
-       background-color: var(--glow-color);
-       box-shadow: 0 0 1em .5em var(--glow-color),
+   .check-button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .5em var(--glow-color),
               0 0 4em 2em var(--glow-spread-color),
               inset 0 0 .5em .5em var(--glow-color);
-      }
+}
       
-      .check-button:active {
-       box-shadow: 0 0 0.6em .5em var(--glow-color),
+.check-button:active {
+    box-shadow: 0 0 0.6em .5em var(--glow-color),
               0 0 2.5em 2em var(--glow-spread-color),
               inset 0 0 .5em .5em var(--glow-color);
-      }
+}
 
 /*score*/
-   #score {
+#score {
     text-align:center;
     width: 15%;
     margin: auto;
