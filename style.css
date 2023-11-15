@@ -29,8 +29,8 @@ h2 {
     outline: none;
     box-shadow: 0 0 1em .1em var(--glow-color),
            0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .5em .2em var(--glow-color);
-    text-shadow: 0 0 .5em var(--glow-color);
+           inset 0 0 .2em .1em var(--glow-color);
+    text-shadow: 0 0 .3em var(--glow-color);
     position: relative;
     transition: all 0.3s;
    }
@@ -131,10 +131,10 @@ h2 {
 
 .buttons {
        /* display: flex; */
-       flex-direction: column;
+       /* flex-direction: column; */
        /* width: 15%; */
        align-content: center;
-       align-items: stretch;
+       /* align-items: stretch; */
        padding: 0.5%;
 }
 
@@ -155,10 +155,10 @@ h2 {
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;
-    box-shadow: 0 0 1em .2em var(--glow-color),
+    box-shadow: 0 0 1em .1em var(--glow-color),
            0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .4em .2em var(--glow-color);
-    text-shadow: 0 0 .4em var(--glow-color);
+           inset 0 0 .2em .1em var(--glow-color);
+    text-shadow: 0 0 .3em var(--glow-color);
     position: relative;
     transition: all 0.3s;
    }
@@ -208,10 +208,10 @@ h2 {
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;
-    box-shadow: 0 0 1em .2em var(--glow-color),
+    box-shadow: 0 0 1em .1em var(--glow-color),
            0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .3em .2em var(--glow-color);
-    text-shadow: 0 0 .4em var(--glow-color);
+           inset 0 0 .2em .1em var(--glow-color);
+    text-shadow: 0 0 .3em var(--glow-color);
     position: relative;
     transition: all 0.3s;
 }
@@ -235,7 +235,7 @@ h2 {
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .2em var(--glow-color),
               0 0 4em 2em var(--glow-spread-color),
-              inset 0 0 .4em .3em var(--glow-color);
+              inset 0 0 .2em .2em var(--glow-color);
 }
       
 .check-button:active {
@@ -263,12 +263,13 @@ h2 {
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;
-    box-shadow: 0 0 1em .5em var(--glow-color),
+    box-shadow: 0 0 1em .1em var(--glow-color),
            0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .5em .2em var(--glow-color);
-    text-shadow: 0 0 .5em var(--glow-color);
+           inset 0 0 .2em .1em var(--glow-color);
+    text-shadow: 0 0 .3em var(--glow-color);
     position: relative;
     transition: all 0.3s;
+    z-index: -1;
    }
    
    #score::after {
@@ -289,8 +290,8 @@ h2 {
     color: var(--btn-color);
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .2em var(--glow-color),
-           0 0 2em 2em var(--glow-spread-color),
-           inset 0 0 .5em .5em var(--glow-color);
+           0 0 2em 1em var(--glow-spread-color),
+           inset 0 0 .1em .1em var(--glow-color);
    }
 
    #score:active {
@@ -315,30 +316,30 @@ h2 {
     #score{
       width: 100%;
       /* height: 10vh; */
-      padding: 2%;
+      padding: 1%;
       z-index: -1;
       margin-bottom: 0;
     }
     .drop-zone{
         width: 10%;
-        height: 70px;
+        height: 67px;
         font-size: 50%;
     }
     .drop-box{
         width: 100%;
-        height: 50%;
+        height: 100px;
         margin-bottom: 10%;
     }
     .drag-item {
-        width: 33px;
-        height: 60px;
-        margin: 0.5%;
+        height: 55px;
+        margin: 0.25%;
     }
     h2 {
         width: 100%;
         text-align: center;
         padding: 1%;
     }
+    /* body {width: fit-content;} */
 }
 
 @media (max-width:900px) {
