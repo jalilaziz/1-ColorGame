@@ -347,7 +347,7 @@ h2 {
     }
 }
 
-@media (max-width:490px) {
+@media (max-width:350px) {
     body {
         width: fit-content;
     }
